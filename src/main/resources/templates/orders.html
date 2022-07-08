@@ -22,11 +22,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="order : ${orders}">
-                    <td th:text="${order.id}">Id</td>
-                    <td th:text="${order.getDrug()}">getDrug</td>
-                    <td th:text="${order.getStatus()}">getStatus</td>
-                    <td th:text="${order.getCreateDate()}">getCreateDate</td>
+                <tr th:each="reservation : ${reservations}">
+                    <td th:text="${reservation.id}">Id</td>
+                    <td th:text="${reservation.getDrug()}">getDrug</td>
+                    <td th:text="${reservation.getStatus()}">getStatus</td>
+                    <td th:text="${reservation.getCreateDate()}">getCreateDate</td>
                 </tr>
                 </tbody>
             </table>

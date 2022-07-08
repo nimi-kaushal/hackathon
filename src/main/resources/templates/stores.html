@@ -131,14 +131,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
                         <li>
-                            <button type="button" class="btn btn-info btn-lg" onclick="getOrders()">Open Modal
+                            <button type="button" class="btn btn-info btn-lg" onclick="getOrders()">View Past Orders
                             </button>
 
                         </li>
-
                     </ul>
                     <form class="d-flex">
                         <input aria-label="Search" class="form-control me-2" id="inputDrugName" placeholder="Search"
@@ -210,12 +207,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="order : ${orders}">
-                            <td th:text="${order.id}">Id</td>
-                            <td th:text="${order.getDrug()}">getDrug</td>
-                            <td th:text="${order.getStore()}">getDrug</td>
-                            <td th:text="${order.getStatus()}">getStatus</td>
-                            <td th:text="${order.getCreateDate()}">getCreateDate</td>
+                        <tr th:each="reservation : ${reservations}">
+                            <td th:text="${reservation.id}">Id</td>
+                            <td th:text="${reservation.getDrug()}">getDrug</td>
+                            <td th:text="${reservation.getStore()}">getDrug</td>
+                            <td th:text="${reservation.getStatus()}">getStatus</td>
+                            <td th:text="${reservation.getCreateDate()}">getCreateDate</td>
                         </tr>
                         </tbody>
                     </table>
